@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Hoja_en_sucio.ipynb
+dict.py
+dict2.py
+.DS_Store
+input/tarifarios/aseguradoras_tarifarios.xlsx

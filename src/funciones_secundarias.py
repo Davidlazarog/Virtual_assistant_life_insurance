@@ -21,12 +21,15 @@ def hablando(text):
     engine.runAndWait() 
 
 def final():
-    fn.hablando(f'Lo siento, debido a tu ultima respuesta no estoy autorizado a darte presupuestos, ¿desea llamar a un agente de alguna de estas aseguradoras?')
+    hablando(f'Lo siento, debido a tu ultima respuesta no estoy autorizado a darte presupuestos, ¿desea llamar a un agente de alguna de estas aseguradoras?')
     print(f'Lo siento, debido a tu ultima respuesta no estoy autorizado a darte presupuestos, ¿desea llamar a un agente de alguna de estas aseguradoras?')
 
+
 def trat_audio (x):
-    x = r.listen(source)
-    x = r.recognize_google(x, language = 'es-ES')
-    x = x.split()
-    x = x.lower()
-    return x
+    with sr.Microphone() as source:
+        x = r.listen(source)
+        x = r.recognize_google(x, language = 'es-ES')
+        x = x.split()
+        return x
+
+        
